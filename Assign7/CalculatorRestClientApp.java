@@ -1,3 +1,4 @@
+//CalculatorRestClientApp
 package org.calculator.client;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

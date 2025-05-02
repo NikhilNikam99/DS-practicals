@@ -1,12 +1,11 @@
-import java.net.*;
-import java.rmi.*;
+import java.rmi.Naming;
+
 public class AddServer {
-public static void main(String args[]) {
-try {
-AddServerImpl addServerImpl = new AddServerImpl(); Naming.rebind("//127.0.0.1/AddServer", obj);
-System.out.println("in server side");
-}
-catch(Exception e) { System.out.println("Exception: " + e);
-}
-}
+    public static void main(String[] args) {
+        try {
+            Naming.rebind("AddServer", new AddServerImpl());
+        } catch (Exception e) {
+            System.out.println("Server Exception: " + e);
+        }
+    }
 }
